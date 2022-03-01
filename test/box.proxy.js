@@ -4,7 +4,9 @@ let Box, box
 
 // Start test block
 describe('Box (proxy)', function () {
-  beforeEach(async function () {
+
+  // beforeEach(async function () {
+  before(async function () {
     Box = await ethers.getContractFactory("Box")
     // box = await upgrades.deployProxy(Box, [42], { initializer: 'store' })
     box = await upgrades.deployProxy(Box, [42], { initializer: 'initialize' })
