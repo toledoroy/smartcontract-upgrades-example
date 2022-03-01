@@ -2,12 +2,20 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.2;
  
+import "hardhat/console.sol"; 
+
 contract Box {
     uint256 private value;
  
     // Emitted when the stored value changes
     event ValueChanged(uint256 newValue);
- 
+    
+
+    function initialize(uint256 newValue) public {  //TODO: as Initializer
+        store(newValue);
+    }
+    
+
     // Stores a new value in the contract
     function store(uint256 newValue) public {
         value = newValue;
