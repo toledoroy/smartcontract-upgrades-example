@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("@nomiclabs/hardhat-waffle")
 require("@nomiclabs/hardhat-ethers")
 require('@openzeppelin/hardhat-upgrades')
@@ -28,6 +29,8 @@ const MNEMONIC = process.env.MNEMONIC || "your mnemonic"
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "Your etherscan API key"
 // optional
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "your private key"
+
+
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
@@ -38,10 +41,8 @@ module.exports = {
     },
     rinkeby: {
       url: RINKEBY_RPC_URL,
-      // accounts: [PRIVATE_KEY],
-      accounts: {
-        mnemonic: MNEMONIC,
-      },
+      accounts: [PRIVATE_KEY],
+      // accounts: { mnemonic: MNEMONIC },
       saveDeployments: true,
     },
   },

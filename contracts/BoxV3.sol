@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.2;
 
-import "./interfaces/IConfig.sol"; 
+import "./interfaces/IConfig2.sol"; 
  
-contract BoxV2 {
+contract BoxV3 {
     uint256 private value;
     address public CONFIG;
 
@@ -34,6 +34,6 @@ contract BoxV2 {
     }
     function getConfValue() public view returns (string memory) {
         require(CONFIG != address(0), "NO CONFIG FILE");
-        return IConfig(CONFIG).testFunc1();
+        return IConfig(CONFIG).testFunc2();
     }
 }

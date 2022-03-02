@@ -4,6 +4,7 @@ async function main() {
     // const proxy = await upgrades.deployProxy(Box, [42], { initializer: 'store' })
     const proxy = await upgrades.deployProxy(Box, [42], { initializer: 'initialize' })
     console.log("Proxy of Box deployed to:", proxy.address)
+    // console.log("Box deployed to:", proxy.address)
 }
 
 main()

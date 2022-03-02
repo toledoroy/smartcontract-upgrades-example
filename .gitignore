@@ -1,3 +1,4 @@
+.env
 .openzeppelin
 artifacts
 cache

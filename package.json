@@ -12,6 +12,7 @@
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^2.1.7",
     "@openzeppelin/hardhat-upgrades": "^1.11.0",
+    "dotenv": "^16.0.0",
     "hardhat-deploy": "^0.7.9"
   }
 }
